@@ -14,6 +14,15 @@ public class EnchantingTest
 
         durance.DescribeWeapon().Should().Be("Inferno Dagger of the Nooblet\n5 - 10 attack damage\n1.2 attack speed\n+5 fire damage");
     }
+
+    [Fact]
+    public void WhenNoEnchant_BaseWeapon()
+    {
+        var baseWeapon = new BaseWeapon();
+        var durance = new Durance(baseWeapon);
+        
+        durance.DescribeWeapon().Should().Be("Dagger of the Nooblet\n5 - 10 attack damage\n1.2 attack speed");
+    }
 }
 
 public class Durance(IWeapon weapon)
