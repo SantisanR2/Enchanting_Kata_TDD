@@ -27,14 +27,15 @@ public class EnchantingTest
 
 public class Durance(IWeapon weapon)
 {
+    private bool _isFire;
     public void Enchant(string enchantment)
     {
-        
+        if (enchantment.Equals("fire")) _isFire = true;
     }
 
     public string DescribeWeapon()
     {
-        return "Inferno Dagger of the Nooblet\n5 - 10 attack damage\n1.2 attack speed\n+5 fire damage";
+        return _isFire ? "Inferno Dagger of the Nooblet\n5 - 10 attack damage\n1.2 attack speed\n+5 fire damage" : weapon.Stats();
     }
 }
 
@@ -47,6 +48,6 @@ public class BaseWeapon: IWeapon
 {
     public string Stats()
     {
-        throw new NotImplementedException();
+        return "Dagger of the Nooblet\n5 - 10 attack damage\n1.2 attack speed";
     }
 }
