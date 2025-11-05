@@ -20,12 +20,12 @@ public class Durance(IWeapon weapon)
 {
     public void Enchant(string enchantment)
     {
-        throw new NotImplementedException();
+        
     }
 
     public string DescribeWeapon()
     {
-        throw new NotImplementedException();
+        return "Inferno Dagger of the Nooblet\n5 - 10 attack damage\n1.2 attack speed\n+5 fire damage";
     }
 }
 
